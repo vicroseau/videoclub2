@@ -32,7 +32,7 @@ public class Adherent {
 	@JoinColumn(name="Adresse")
 	private Adresse adresse;
 	@OneToMany(mappedBy="adherent")
-	//private Collection<Article> listeArticle;
+	private Collection<Article> listeArticle;
 	@Version
 	private int version;
 	
@@ -92,11 +92,11 @@ public class Adherent {
 		this.version = version;
 	}
 	
-//	public Collection<Article> getListeArticle() {
-//		return listeArticle;
-//	}
-//	public void setListeAdherents(Collection<Article> listeArticle) {
-//		this.listeArticle = listeArticle;
-//	}
+	public Collection<Article> getListeArticle() {
+		return listeArticle;
+	}
+	public void setListeAdherents(Collection<Article> listeArticle) {
+		this.listeArticle = listeArticle;
+	}
 	
 }
