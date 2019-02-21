@@ -54,6 +54,38 @@ public class Article {
 	}
 
 	public void setBluray(Bluray bluray) {
+
+import javax.persistence.Id;
+
+@Entity
+public class Article {
+
+	@Id
+	@Column(name="noArticle")
+	private Long noArticle;
+	
+	@Column(name="nbDisques")
+	private int nbDisques;
+	
+	@Column(name="version")
+	private int version;
+	
+	@Column(name="bonus")
+	private Dvd dvd;
+	
+	@Column(name="troisD")
+	private Bluray bluray;
+
+	public Article() {
+		
+	}
+
+	public Article(Long noArticle, int nbDisques, int version, Dvd dvd, Bluray bluray) {
+		super();
+		this.noArticle = noArticle;
+		this.nbDisques = nbDisques;
+		this.version = version;
+		this.dvd = dvd;
 		this.bluray = bluray;
 	}
 
@@ -81,4 +113,24 @@ public class Article {
 		this.version = version;
 	}
 
+<<<<<<< HEAD
+=======
+	public Dvd getDvd() {
+		return dvd;
+	}
+
+	public void setDvd(Dvd dvd) {
+		this.dvd = dvd;
+	}
+
+	public Bluray getBluray() {
+		return bluray;
+	}
+
+	public void setBluray(Bluray bluray) {
+		this.bluray = bluray;
+	}
+	
+	
+>>>>>>> 30e58df794019e85631e25249984303958582ade
 }
