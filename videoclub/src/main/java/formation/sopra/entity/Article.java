@@ -18,16 +18,16 @@ public class Article {
 	private int version;
 	
 	@Column(name="bonus")
-	private Dvd dvd;
+	private Boolean dvd;
 	
 	@Column(name="troisD")
-	private Bluray bluray;
+	private Boolean bluray;
 
 	public Article() {
 		
 	}
 
-	public Article(Long noArticle, int nbDisques, int version, Dvd dvd, Bluray bluray) {
+	public Article(Long noArticle, int nbDisques, int version, Boolean dvd, Boolean bluray) {
 		super();
 		this.noArticle = noArticle;
 		this.nbDisques = nbDisques;
@@ -60,19 +60,19 @@ public class Article {
 		this.version = version;
 	}
 
-	public Dvd getDvd() {
+	public Boolean getDvd() {
 		return dvd;
 	}
 
-	public void setDvd(Dvd dvd) {
+	public void setDvd(Boolean dvd) {
 		this.dvd = dvd;
 	}
 
-	public Bluray getBluray() {
+	public Boolean getBluray() {
 		return bluray;
 	}
 
-	public void setBluray(Bluray bluray) {
+	public void setBluray(Boolean bluray) {
 		this.bluray = bluray;
 	}
 	

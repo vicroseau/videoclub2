@@ -1,7 +1,6 @@
 package formation.sopra.repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,8 +11,8 @@ import formation.sopra.entity.Film;
 @Repository
 public interface FilmRepository extends JpaRepository<Film, Long> {
 	
-	@Query("select p from Film p left join fetch p.realisateur")
-	List<Film> findAllWithReal();
+//	@Query("select p from Film p left join fetch p.realisateur")
+//	List<Film> findAllWithReal();
 	
 
 

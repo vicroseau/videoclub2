@@ -29,16 +29,12 @@
 		<tr>
 			<th><spring:message code="film.list.header.id"></spring:message>
 			</th>
-			<th><spring:message code="film.list.header.name"></spring:message>
-			</th>
-			<th><spring:message code="film.list.header.name"></spring:message>
+			<th><spring:message code="film.list.header.titre"></spring:message>
 			</th>
 
-			<th><spring:message code="film.list.header.birthday"></spring:message>
+			<th><spring:message code="film.list.header.date"></spring:message>
 			</th>
 
-			<th><spring:message code="film.list.header.position"></spring:message>
-			</th>
 		</tr>
 
 		<c:forEach var="film" items="${listefilm}">
@@ -49,9 +45,9 @@
 				<td><fmt:formatDate value="${film.date}" pattern="dd/MM/yyyy"></fmt:formatDate></td>
 				<td><a href="edit?id=${film.id}" class="btn btn-info"><spring:message
 							code="film.list.edit"></spring:message></a></td>
-				<td><sec:authorize access="hasRole('ROLE_ADMIN')">
+				<td>
 					<a href="delete?id=${film.id}" class="btn btn-danger"><spring:message
-								code="film.list.delete"></spring:message></a></sec:authorize></td>
+								code="film.list.delete"></spring:message></a></td>
 					<td></td>
 			</tr>
 		</c:forEach>

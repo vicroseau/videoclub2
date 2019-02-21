@@ -2,7 +2,6 @@ package formation.sopra.controller;
 
 import java.util.Optional;
 
-import javax.swing.text.Position;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +30,7 @@ public class FilmController {
 
 	@GetMapping("/list")
 	public String list(Model model) {
-		model.addAttribute("listeJoueur", filmRepository.findAllWithReal());
+		model.addAttribute("listeJoueur", filmRepository.findAll());
 		return "film/list";
 	}
 	
