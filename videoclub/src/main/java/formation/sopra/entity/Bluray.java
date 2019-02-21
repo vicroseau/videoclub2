@@ -1,9 +1,7 @@
 package formation.sopra.entity;
 
-<<<<<<< HEAD
-=======
+
 import javax.persistence.Column;
->>>>>>> 30e58df794019e85631e25249984303958582ade
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,20 +10,7 @@ public class Bluray {
 
 	@Id
 	private Long noArticle;
-<<<<<<< HEAD
 
-	private Boolean troisD;
-
-	public Bluray(Long noArticle, Boolean troisD) {
-		super();
-		this.noArticle = noArticle;
-		this.troisD = troisD;
-	}
-
-	public Bluray() {
-=======
-	
-	
 	private Boolean troisD;
 	
 	@Column(name="version")
@@ -40,7 +25,6 @@ public class Bluray {
 
 	public Bluray() {
 		
->>>>>>> 30e58df794019e85631e25249984303958582ade
 	}
 
 	public Long getNoArticle() {
@@ -58,8 +42,6 @@ public class Bluray {
 	public void setTroisD(Boolean troisD) {
 		this.troisD = troisD;
 	}
-<<<<<<< HEAD
-=======
 
 	public int getVersion() {
 		return version;
@@ -68,7 +50,7 @@ public class Bluray {
 	public void setVersion(int version) {
 		this.version = version;
 	}
->>>>>>> 30e58df794019e85631e25249984303958582ade
+
 	
 	
 }
