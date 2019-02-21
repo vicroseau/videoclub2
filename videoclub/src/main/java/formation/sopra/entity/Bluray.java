@@ -5,15 +5,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+
 public class Bluray {
 
-	@Id
 	private Long noArticle;
 
+	
 	private Boolean troisD;
 	
-	@Column(name="version")
+	
 	private int version;
 
 	public Bluray(Long noArticle, Boolean troisD, int version) {

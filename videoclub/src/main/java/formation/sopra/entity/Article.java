@@ -11,6 +11,7 @@ import javax.persistence.Version;
 
 
 @Entity
+@Table (name="article")
 public class Article {
 
 	@Id
@@ -24,22 +25,22 @@ public class Article {
 	private int version;
 	
 	@Column(name="bonus")
-	private Dvd dvd;
+	private Boolean bonus;
 	
 	@Column(name="troisD")
-	private Bluray bluray;
+	private Boolean troisD;
 
 	public Article() {
 		
 	}
 
-	public Article(Long noArticle, int nbDisques, int version, Dvd dvd, Bluray bluray) {
+	public Article(Long noArticle, int nbDisques, int version, Boolean bonus, Boolean troisD) {
 		super();
 		this.noArticle = noArticle;
 		this.nbDisques = nbDisques;
 		this.version = version;
-		this.dvd = dvd;
-		this.bluray = bluray;
+		this.bonus = bonus;
+		this.troisD = troisD;
 	}
 
 	public Long getNoArticle() {
@@ -67,20 +68,20 @@ public class Article {
 	}
 
 
-	public Dvd getDvd() {
-		return dvd;
+	public Boolean getBonus() {
+		return bonus;
 	}
 
-	public void setDvd(Dvd dvd) {
-		this.dvd = dvd;
+	public void setBonus(Dvd dvd) {
+		this.bonus = bonus;
 	}
 
-	public Bluray getBluray() {
-		return bluray;
+	public Boolean getTroisD() {
+		return troisD;
 	}
 
-	public void setBluray(Bluray bluray) {
-		this.bluray = bluray;
+	public void setTroisD(Bluray bluray) {
+		this.troisD = troisD;
 	}
 	
 	

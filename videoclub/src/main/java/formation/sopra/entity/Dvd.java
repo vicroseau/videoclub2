@@ -1,19 +1,15 @@
 package formation.sopra.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
 public class Dvd {
 
-	@Id
 	private Long noArticle;
 
 	private Boolean bonus;
-	
-	@Column(name="version")
+
 	private int version;
 
 	public Dvd(Long noArticle, Boolean bonus, int version) {
@@ -24,7 +20,7 @@ public class Dvd {
 	}
 
 	public Dvd() {
-		
+
 	}
 
 	public Long getNoArticle() {
@@ -50,6 +46,5 @@ public class Dvd {
 	public void setVersion(int version) {
 		this.version = version;
 	}
-	
-	
+
 }
